@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>IBM project</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style1.css') }}">
+<body>
+ <div class="login">
+	<h1 style="color:black;font-size:40px;"><center>CO2 EMISSION RATE FROM CARS</center></h1>
+
+        
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('y_predict')}}"method="post">
+        <select name="State" required="required">
+		  <option value="">FUEL TYPE </option>
+		  <option value=0>Premium Gasoline</option>
+		  <option value=1>Regular Gasoline</option>
+		  <option value=2>E85</option>
+		  <option value=3>Diesel</option>
+		</select><br>
+	    <p>
+    	<input type="text" name="ENGINESIZE" placeholder="ENGINE SIZE"  required="required" /><br>
+        <input type="text" name="CYLINDERS" placeholder="NO. OF CYLINDERS" required="required" /><br>
+		<input type="text" name="FUELCONSUMPTION_CITY" placeholder="FUEL CONSUMPTION-CITY" required="required" /><br>
+		<input type="text" name="FUELCONSUMPTION_HWY" placeholder="FUEL CONSUMPTION-HIGHWAY" required="required" /><br>
+		<input type="text" name="FUELCONSUMPTION_COMB	" placeholder="FUEL CONSUMPTION-COMBINATION	" required="required" /><br>
+		</p>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    
+    </form>
+
+   <br>
+   <br>
+   
+ </div>
+
+
+</body>
+</html>
+

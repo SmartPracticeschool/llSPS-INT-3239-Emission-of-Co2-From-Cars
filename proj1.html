@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>IBM project</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style1.css') }}">
+<body>
+	<h1 style="color:black;font-size:40px;"><center>CO2 EMISSION RATE FROM CARS</center></h1>
+
+        
+    {% if prediction_text>200 %}
+         <h1 style="color:black;font-size:25px;"><center> The CO2 emission rate for your vehicle is {{ prediction_text }} g/km.</center></h1>
+         <h1 style="color:black;font-size:25px;"><center>Kindly stick to the standards, else your vehicle will be seized!</center></h1>
+      {% else %}
+         <h1 style="color:black;font-size:25px;"><center>The CO2 emission rate for your vehicle is {{ prediction_text }} g/km.</center></h1>
+         <h1 style="color:black;font-size:25px;"><center>You are doing good!</center></h1>
+      {% endif %}
+
+   <br>
+   <br>
+
+
+</body>
+</html>
+
